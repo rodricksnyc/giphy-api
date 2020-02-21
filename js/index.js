@@ -4,11 +4,11 @@ $('#gifsView').empty();
 
 
 var apiKey = "CXsUC0ypMObjvqbhVQ2bM8EVHbkh5fmF";
-var batchSize = 10;
+var batchSize = 20;
 var offset = 0
 
 
-var animals = ["dog", "smile", "cat", "laugh", "rabbit", "funny", "idiot","amusing", "singing", "dancing", "crazy", "turtle", "chicken","capybara","teacup pig", "frog", "big laugh", "joke" , "angry"]
+var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish","bird", "ferret","turtle", "sugar slider","chinchilla","hedgehog","hermit crab","gerbil","pygmy goat", "chicken","capybara","teacup pig","serval","salamander", "frog"]
 
 function createAnimalButtons() {
   $("#animalButtons").empty();
@@ -60,13 +60,15 @@ var queryURL = `http://api.giphy.com/v1/gifs/search?q=${action}&limit=${batchSiz
     var gifURL = $(`<a href="${results[i].url}" target="_blank"><p>Click GIF to view or go to link!</a>`);
 
     var gifImage = $("<img>");
+    gifDownload = $(`<p>Download: <span><img style="max-width:300px" src="${results[i].images.downsized.url}" target="_blank"></span></p>`);
     gifImage.attr("src", results[i].images.fixed_height_small_still.url);
     gifImage.attr("data-still",results[i].images.fixed_height_small_still.url);
     gifImage.attr("data-animate",results[i].images.fixed_height_small.url);
     gifImage.attr("data-state", "still");
     gifImage.addClass("image");
-    gifDiv.append(gifImage);
-    gifDiv.append(gifURL);
+    // gifDiv.append(gifImage);
+    // gifDiv.append(gifURL);
+    gifDiv.append(gifDownload);
     $("#gifsView").prepend(gifDiv);
   }
   });
@@ -91,3 +93,4 @@ $(document).on("click", ".image", function(){
 
 
 });
+
