@@ -57,8 +57,8 @@ var queryURL = `http://api.giphy.com/v1/gifs/search?q=${action}&limit=${batchSiz
 
     var gifDiv = $("<div>");
     gifDiv.addClass("gifDiv");
-    var gifRating = $("<p>").text(`Rating: ${results[i].rating}`);
-    gifDiv.append(gifRating);
+    var gifURL = $(`<a href="${results[i].url}" target="_blank"><p>Click GIF to view or go to link!</a>`);
+
     var gifImage = $("<img>");
     gifImage.attr("src", results[i].images.fixed_height_small_still.url);
     gifImage.attr("data-still",results[i].images.fixed_height_small_still.url);
@@ -66,6 +66,7 @@ var queryURL = `http://api.giphy.com/v1/gifs/search?q=${action}&limit=${batchSiz
     gifImage.attr("data-state", "still");
     gifImage.addClass("image");
     gifDiv.append(gifImage);
+    gifDiv.append(gifURL);
     $("#gifsView").prepend(gifDiv);
   }
   });
