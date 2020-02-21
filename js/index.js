@@ -8,7 +8,7 @@ var batchSize = 10;
 var offset = 0
 
 
-var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish","bird", "ferret","turtle", "sugar slider","chinchilla","hedgehog","hermit crab","gerbil","pygmy goat", "chicken","capybara","teacup pig","serval","salamander", "frog"]
+var animals = ["dog", "smile", "cat", "laugh", "rabbit", "funny", "idiot","amusing", "singing", "dancing", "crazy", "turtle", "chicken","capybara","teacup pig", "frog", "big laugh", "joke" , "angry"]
 
 function createAnimalButtons() {
   $("#animalButtons").empty();
