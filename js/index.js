@@ -59,7 +59,7 @@ var queryURL = `http://api.giphy.com/v1/gifs/search?q=${action}&limit=${batchSiz
     var gifURL = $(`<a href="${results[i].url}" target="_blank"><p>Click GIF to view or go to link!</a>`);
 
     var gifImage = $("<img>");
-    gifDownload = $(`<p>Download: <span><img style="max-width:300px" src="${results[i].images.downsized.url}" target="_blank"></span></p>`);
+    gifDownload = $(`<img style="max-width:300px" src="${results[i].images.downsized.url}" target="_blank">`);
     gifImage.attr("src", results[i].images.fixed_height_small_still.url);
     gifImage.attr("data-still",results[i].images.fixed_height_small_still.url);
     gifImage.attr("data-animate",results[i].images.fixed_height_small.url);
