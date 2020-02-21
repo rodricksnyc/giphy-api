@@ -7,8 +7,7 @@ var apiKey = "CXsUC0ypMObjvqbhVQ2bM8EVHbkh5fmF";
 var batchSize = 20;
 var offset = 0
 
-
-var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish","bird", "ferret","turtle", "sugar slider","chinchilla","hedgehog","hermit crab","gerbil","pygmy goat", "chicken","capybara","teacup pig","serval","salamander", "frog"]
+var animals = ["dog", "cat", "funny", "bye", "hello", "laugh", "crazy", "nice", "weirdo", "too much", "help", "scary", "funny"]
 
 function createAnimalButtons() {
   $("#animalButtons").empty();
